@@ -1,0 +1,6 @@
+{
+  "name": "digitaldotads",
+  "description": "Pre-order 3-in-1 Smart NFC + QR Connect Cards for shop owners. Let customers tap or scan to leave a Google Review, chat on WhatsApp, and follow your Instagram in one click.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

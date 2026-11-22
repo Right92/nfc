@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: "Plus Jakarta Sans", "Noto Sans Devanagari", "Noto Sans Telugu", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: "DM Sans", "Noto Sans Devanagari", "Noto Sans Telugu", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html {
+    font-family: var(--font-body);
+    color: #0a0a0a;
+    background-color: #ffffff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Browser autofill detection hook so we can show the green "Auto-filled" tick immediately */
+@keyframes onAutoFillStart {
+  from {
+    opacity: 0.999;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  animation-name: onAutoFillStart;
+  animation-duration: 0.001s;
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #0a0a0a !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
